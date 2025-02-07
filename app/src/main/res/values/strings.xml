@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Scrolla</string>
+    <string name="title_activity_get_started">GetStarted</string>
+    <string name="title_activity_splashscreen">Splashscreen</string>
+    <string name="Splashscreen">Splashscreen</string>
+    <integer-array name="Image_Book">
+        <item>@drawable/cities</item>
+        <item>@drawable/dragonpearl</item>
+        <item>@drawable/songofsilver</item>
+        <item>@drawable/wondurus</item>
+    </integer-array>
+    <string-array name="Name_Book">
+        <item>Cities of Smoke and Starlight (Gate Chronicles Book 1)</item>
+        <item>Dragon Pearl</item>
+        <item>Song of Silver Flame Like Night - by Amelie Wen Zhao</item>
+        <item>Where Magic A Rises Wondrous Graphic </item>
+    </string-array>
+    <string-array name="Price_Book">
+        <item>IDR 112.500,00   </item>
+        <item>IDR 125.000,00   </item>
+        <item>IDR 100.000,00   </item>
+        <item>IDR 95.000,00    </item>
+    </string-array>
+    <string name="title_activity_desc_card">Desc_card</string>
+    <string name="title_activity_dari_ai">dariAI</string>
+    <string name="title_activity_detail">Detail_Activity</string>
+</resources>
