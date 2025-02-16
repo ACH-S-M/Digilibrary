@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -247,10 +248,12 @@ fun BookInfo() {
             Text(text = "Genre", fontSize = 14.sp, color = Color.Black)
             Text(text = "Romance, Comedy, Journey", fontSize = 12.sp, color = Color.Black)
         }
+        Divider(modifier = Modifier.width(2.dp).height(40.dp), color = Color.Black)
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(text = "50", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.Black)
             Text(text = "Chapters", fontSize = 12.sp, color = Color.Black)
         }
+        Divider(modifier = Modifier.width(2.dp).height(40.dp), color = Color.Black)
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(text = "4.5★", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.Black)
             Text(text = "80 Reviews", fontSize = 12.sp, color = Color.Black)

@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="romanceColor">#3D7F7F</color>
+    <color name="fictionColor">#3D8F5F</color>
+    <color name="scifiColor">#3D6FBF</color>
+    <color name ="Black">#000000</color>
 </resources>
