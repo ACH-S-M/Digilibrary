@@ -90,14 +90,6 @@ fun NavigationGraph(navController: NavHostController,modifier: Modifier = Modifi
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun BottomNavbarPrev() {
-    ScrollaTheme {
-        BottomNavbar(rememberNavController())
-    }
-
-}
 @Composable
 fun DoubleBackExit(navController: NavController) {
     var backPressedOnce by remember { mutableStateOf(false) }
@@ -114,4 +106,12 @@ fun DoubleBackExit(navController: NavController) {
             }
         }
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun BottomNavbarPrev() {
+    ScrollaTheme {
+        BottomNavbar(rememberNavController())
+    }
+
 }

@@ -10,27 +10,34 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.sharp.Notifications
+import androidx.compose.material3.DrawerState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.scrolla.ui.theme.ScrollaTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 @Composable
-fun TopMenuBar(modifer:Modifier = Modifier) {
+fun TopMenuBar(modifer:Modifier = Modifier,drawerState: DrawerState,scope: CoroutineScope) {
     val context = LocalContext.current
-    Row(modifer.fillMaxWidth()
-        .padding(0.dp,6.dp),
+    Row(
+        modifer
+            .fillMaxWidth()
+            .padding(0.dp, 6.dp),
         Arrangement.SpaceBetween,
         Alignment.CenterVertically,
     ) {
         IconButton(onClick = {
-            Toast.makeText(context, "Menu drawable kebuka", Toast.LENGTH_SHORT).show()
+            scope.launch { drawerState.open() }
         },) {
             Icon(imageVector = Icons.Filled.Menu, contentDescription = null,
                 tint = MaterialTheme.colorScheme.onBackground,
@@ -52,13 +59,5 @@ fun TopMenuBar(modifer:Modifier = Modifier) {
                 )
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun TopMenuBarPreview() {
-    ScrollaTheme {
-        TopMenuBar()
     }
 }
