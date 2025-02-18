@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Scrolla"
         tools:targetApi="31">
         <activity
+            android:name=".Notification"
+            android:exported="false"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/Theme.Scrolla" />
+        <activity
             android:name=".Splashscreen"
             android:exported="false"
             android:label="@string/title_activity_splashscreen"
@@ -27,7 +32,6 @@
             android:exported="false"
             android:label="@string/title_activity_detail"
             android:theme="@style/Theme.Scrolla" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true"

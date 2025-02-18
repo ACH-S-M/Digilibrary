@@ -154,7 +154,7 @@ fun MainScreen() {
         },
     ) {
         Scaffold(
-            topBar = { TopMenuBar(drawerState = drawerState, scope = scope)},
+            topBar = { TopMenuBar(drawerState = drawerState, scope = scope, navcontroller = navController)},
             bottomBar = { BottomNavbar(navController) }
         ) { paddingValues ->
             Box(modifier = Modifier.padding(paddingValues)) {

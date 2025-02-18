@@ -42,28 +42,28 @@
         <item>@drawable/fiction</item>
         <item>@drawable/scifi</item>
     </integer-array>
-   <integer-array name="Image_Res_section">
-       <item>@drawable/daugerofmoongoodness</item>
-       <item>@drawable/elizabethlim</item>
-       <item>@drawable/areyoulistening</item>
+    <integer-array name="Image_Res_section">
+        <item>@drawable/daugerofmoongoodness</item>
+        <item>@drawable/elizabethlim</item>
+        <item>@drawable/areyoulistening</item>
         <item>@drawable/heroes</item>
         <item>@drawable/gong</item>
-       <item>@drawable/dragonpromise</item>
-       <item>@drawable/spindle</item>
-       <item>@drawable/huricane</item>
-   </integer-array>
-  <string-array name="title_book_section">
-      <item>Daughter of The Moon Goddess - Suelynn Tan</item>
-      <item>Unravel The Dusk - Elizabeth Lim</item>
-      <item>Are You Listening - by Tillie Walden</item>
-      <item>We Could Be Herous - by Margaret Finnegan</item>
-      <item>Sound The Gong - by Joan He</item>
-      <item>The Dragon’s Promise - by Elizabeth Lim</item>
-      <item>The Spindle of Fate - by Aimee Lim</item>
-      <item>The Hurricane Wars - by Thea Guanzon </item>
-  </string-array>
+        <item>@drawable/dragonpromise</item>
+        <item>@drawable/spindle</item>
+        <item>@drawable/huricane</item>
+    </integer-array>
+    <string-array name="title_book_section">
+        <item>Daughter of The Moon Goddess - Suelynn Tan</item>
+        <item>Unravel The Dusk - Elizabeth Lim</item>
+        <item>Are You Listening - by Tillie Walden</item>
+        <item>We Could Be Herous - by Margaret Finnegan</item>
+        <item>Sound The Gong - by Joan He</item>
+        <item>The Dragon’s Promise - by Elizabeth Lim</item>
+        <item>The Spindle of Fate - by Aimee Lim</item>
+        <item>The Hurricane Wars - by Thea Guanzon </item>
+    </string-array>
     <string-array name="Price_section">
-       <item>IDR 99.000,00   </item>
+        <item>IDR 99.000,00   </item>
         <item>IDR 89.000,00   </item>
         <item>IDR 89.900,00   </item>
         <item>IDR 72.500,00   </item>
@@ -72,4 +72,5 @@
         <item>IDR 110.000,00   </item>
         <item>IDR 90.500,00   </item>
     </string-array>
+    <string name="title_activity_notification">Notification</string>
 </resources>

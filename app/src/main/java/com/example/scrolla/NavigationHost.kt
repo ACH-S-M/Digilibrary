@@ -97,6 +97,7 @@ fun NavigationGraph(navController: NavHostController,modifier: Modifier = Modifi
         composable("search") { ContentDigily(navController) }
         composable("favorites") { Favorite(navController) }
         composable("drawer"){ ContentDigily(navController)}
+        composable("notification") { NotifPage(navController) }
     }
 }
 
@@ -130,13 +131,15 @@ fun DrawerMenuItem(
         modifier = Modifier
             .fillMaxWidth()
             .height(60.dp)
-            .padding(top=8.dp)
+            .padding(top = 8.dp)
             .clickable { onClick() }
     ) {
         Icon(
             imageVector = icon,
             contentDescription = text,
-            modifier = Modifier.padding(start = 30.dp).size(30.dp)
+            modifier = Modifier
+                .padding(start = 30.dp)
+                .size(30.dp)
         )
         Text(
             text = text,

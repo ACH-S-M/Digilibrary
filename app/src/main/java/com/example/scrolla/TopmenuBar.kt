@@ -21,13 +21,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.scrolla.ui.theme.ScrollaTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun TopMenuBar(modifer:Modifier = Modifier,drawerState: DrawerState,scope: CoroutineScope) {
+fun TopMenuBar(modifer:Modifier = Modifier,drawerState: DrawerState,scope: CoroutineScope,navcontroller: NavController) {
     val context = LocalContext.current
     Row(
         modifer
@@ -51,7 +52,7 @@ fun TopMenuBar(modifer:Modifier = Modifier,drawerState: DrawerState,scope: Corou
                     modifier = Modifier.size(30.dp)
                 )
             }
-            IconButton(onClick = { Toast.makeText(context,"Membuka keranjang", Toast.LENGTH_SHORT).show()}) {
+            IconButton(onClick = { navcontroller.navigate("notification")}) {
                 Icon(imageVector = Icons.Sharp.Notifications,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onBackground,
