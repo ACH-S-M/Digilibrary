@@ -73,4 +73,5 @@
         <item>IDR 90.500,00   </item>
     </string-array>
     <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_cart">Cart</string>
 </resources>

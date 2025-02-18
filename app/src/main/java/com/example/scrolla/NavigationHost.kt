@@ -98,6 +98,7 @@ fun NavigationGraph(navController: NavHostController,modifier: Modifier = Modifi
         composable("favorites") { Favorite(navController) }
         composable("drawer"){ ContentDigily(navController)}
         composable("notification") { NotifPage(navController) }
+        composable("cart") { Cart(navController) }
     }
 }
 

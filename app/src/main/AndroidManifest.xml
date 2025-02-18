@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Scrolla"
         tools:targetApi="31">
         <activity
+            android:name=".Cart"
+            android:exported="false"
+            android:label="@string/title_activity_cart"
+            android:theme="@style/Theme.Scrolla" />
+        <activity
             android:name=".Notification"
             android:exported="false"
             android:label="@string/title_activity_notification"
@@ -35,7 +40,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Scrolla">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
