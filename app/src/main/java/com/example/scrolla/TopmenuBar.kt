@@ -1,5 +1,6 @@
 package com.example.scrolla
 
+import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -25,6 +26,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun TopMenuBar(modifer:Modifier = Modifier,drawerState: DrawerState,scope: CoroutineScope,navcontroller: NavController) {
     val context = LocalContext.current
+    val intent = Intent(context,Cart::class.java)
     Row(
         modifer
             .fillMaxWidth()
@@ -41,7 +43,10 @@ fun TopMenuBar(modifer:Modifier = Modifier,drawerState: DrawerState,scope: Corou
 
         }
         Row(modifier = Modifier.padding(start = 12.dp ,end = 12.dp)){
-            IconButton(onClick = { navcontroller.navigate("cart")}) {
+            IconButton(onClick = {
+                context.startActivity(intent)
+
+            }) {
                 Icon(imageVector = Icons.Filled.ShoppingCart, contentDescription = null ,
                     tint = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.size(30.dp)

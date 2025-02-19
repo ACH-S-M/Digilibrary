@@ -13,13 +13,20 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.Divider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -61,14 +68,26 @@ class Cart : ComponentActivity() {
 @Composable
 fun Cart(navController: NavController, modifier: Modifier = Modifier,) {
     Column(modifier.fillMaxSize()) {
-        CardItem(imgRes = painterResource(id = R.drawable.dragonpearl), title = "Dragon pearl" , Price = "IDR 20000" )
-        CardItem(imgRes = painterResource(id = R.drawable.dragonpearl), title = "Dragon pearl" , Price = "IDR 20000" )
-        CardItem(imgRes = painterResource(id = R.drawable.dragonpearl), title = "Dragon pearl" , Price = "IDR 20000" )
+        Icon(imageVector = Icons.Filled.ArrowBack,
+            contentDescription = "Back",
+            modifier
+                .size(80.dp)
+                .padding(vertical = 20.dp), tint = colorPrimaryDigily )
+        Divider(
+            modifier
+                .fillMaxWidth()
+                .padding(bottom = 8.dp), thickness = 2.dp)
+       LazyColumn {
+           items(7) {
+               CardItem(imgRes = painterResource(id = R.drawable.dragonpearl), title = "Dragon pearl" , Price = "IDR 20000" )
+           }
+       }
+
     }
 
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 fun CartPrev() {
     ScrollaTheme {
@@ -131,5 +150,50 @@ fun CardItemPreview() {
         Column {
             CardItem(imgRes = painterResource(id = R.drawable.dragonpearl), title = "Dragon pearl" , Price = "IDR 20000" )
         }
+    }
+}
+
+@Composable
+fun Total(modifier: Modifier = Modifier) {
+    var ischeck = false
+  Row(
+      modifier
+          .fillMaxWidth()
+          .padding(12.dp)
+          .height(80.dp)
+          .border(width = 2.dp, colorPrimaryDigily, RoundedCornerShape(80.dp))
+          .background(color = Color.White ,shape = RoundedCornerShape(80.dp))
+          , verticalAlignment = Alignment.CenterVertically) {
+     Row(
+         modifier
+             .width(IntrinsicSize.Max)
+             .fillMaxHeight()
+             .padding(start = 20.dp), verticalAlignment = Alignment.CenterVertically) {
+         Checkbox(checked = ischeck, onCheckedChange = { ischeck = it })
+         Text(text = "Semua ", fontWeight = FontWeight.Light, color = colorPrimaryDigily)
+     }
+      Column(modifier = Modifier
+          .width(intrinsicSize = IntrinsicSize.Max)
+
+          .fillMaxHeight()
+          .padding(start = 20.dp), verticalArrangement = Arrangement.Center) {
+          Text(text = "Total", fontWeight = FontWeight.Light)
+          Text(text = "", fontWeight = FontWeight.Light)
+      }
+      Row(modifier.fillMaxWidth()
+          .padding(start = 8.dp )
+          .background(color = colorPrimaryDigily)
+          .height(80.dp), verticalAlignment = Alignment.CenterVertically,
+          horizontalArrangement = Arrangement.Center) {
+          Text(text = "CheckOut",color = Color.White)
+      }
+  }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TotalPrev() {
+    ScrollaTheme {
+        Total()
     }
 }
