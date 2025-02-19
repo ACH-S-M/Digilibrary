@@ -17,6 +17,6 @@ Teknologi yang digunakan
 -Laravel(BACKEND)
 -MYsql (Database)
 
-Progress 20%
+Progress 22%
 
 
